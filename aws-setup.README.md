@@ -1,5 +1,7 @@
 <<<<<< Don't terminate instance until after insight workshop >>>>>>
 
+[Pegasus](https://github.com/InsightDataScience/pegasus)
+
 # install pegasus on virtualbox/ubuntu machine
 
 $ cd  ~/aws-wen-at-insight
@@ -295,7 +297,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 export JAVA_HOME=/usr
 Environment installed!
 
-
+[Data Engineering EcoSystem](https://github.com/InsightDataScience/data-engineering-ecosystem/wiki)
 $ peg install wen-gong <technology>
 The technology tag can be any of the following (version set in configuration is bolded):
 
@@ -304,7 +306,13 @@ cassandra installed!
 Cassandra configuration complete!
 
 
-elasticsearch (v5.1.2, v6.2.4)
+** 9 elasticsearch (v5.1.2, v6.2.4)
+FAILED
+gzip: stdin: not in gzip format
+tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+The software wasn't downloaded correctly from the URL (https://s3-us-west-2.amazonaws.com/insight-tech/elasticsearch/elasticsearch-.tar.gz). Check Pegasus GitHub README.
+
 
 ** 7 flink (v1.4.2 with hadoop v2.7 and scala v2.11)
 flink installed!
@@ -340,10 +348,28 @@ $ peg install wen-gong spark
 ** spark installed!
 
 
-storm (v1.2.1)
+** 10 storm (v1.2.1)
+storm installed!
+Storm configuration complete!
+
 
 ** 4 zookeeper (v3.4.10, v3.4.12, v3.4.13)
 Zookeeper configuration complete!
+
+SSH into a node
+
+$ peg ssh wen-gong 1 # ssh to master node
+ubuntu@ip-172-31-87-254:~$
+
+$ peg ssh wen-gong 2 # ssh to work node 1 
+ubuntu@ip-172-31-95-128:~$
+
+$ peg ssh wen-gong 3 # ssh to work node 2
+ubuntu@ip-172-31-90-141:~$
+
+$ peg ssh wen-gong 4 # ssh to work node 3
+ubuntu@ip-172-31-90-128:~$
+
 
 
 
