@@ -1,3 +1,12 @@
+
+NOTE: 
+1) install Pegasus on EC2 instance, terminated it then lost initial setup
+2) launch new instance, but ran into VPC mismatch, security group issue
+   to cause ssh timeout
+3) restart from scratch on virtualbox/ubuntu
+   then it went thru
+
+
 <<<<<< Don't terminate instance until after insight workshop >>>>>>
 
 [Pegasus](https://github.com/InsightDataScience/pegasus)
